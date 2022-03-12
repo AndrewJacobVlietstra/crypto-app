@@ -2,8 +2,8 @@
   --text-primary: #000;
   --bgPrimary: #fff;
   --bgSecondary: #f9f9f9;
-  --pink: #0071bd;
-  --light-blue: #e6f7ff;
+  --blue: #0071bd;
+  --light-blue: #c6edff;
   --border: #d9d9d9;
 }
 
@@ -14,7 +14,7 @@
 }
 
 a:hover {
-  color: var(--pink) !important;
+  color: var(--light-blue) !important;
 }
 
 .app {
@@ -46,6 +46,7 @@ a:hover {
 .logo-container {
   background-color: #001529;
   display: flex;
+  flex-direction: column;
   padding: 20px;
   align-items: center;
   width: 100%;
@@ -149,7 +150,7 @@ a:hover {
 
 .coin-heading-container .coin-name {
   font-weight: 900;
-  color: var(--pink);
+  color: var(--blue);
 }
 
 .coin-heading-container p {
@@ -169,13 +170,13 @@ a:hover {
   font-weight: 700;
   font-size: 1.4rem;
   margin-top: 20px;
-  color: var(--pink);
+  color: var(--blue);
 }
 
 .coin-details-heading {
   font-weight: 700 !important;
   margin-top: 20px !important;
-  color: var(--pink) !important;
+  color: var(--blue) !important;
 }
 
 .coin-stats {
@@ -211,7 +212,7 @@ a:hover {
 
 .coin-desc-link h2 {
   font-weight: 700;
-  color: var(--pink);
+  color: var(--blue);
 }
 
 .coin-desc-link p {
@@ -220,7 +221,7 @@ a:hover {
 }
 
 .coin-desc-link a {
-  color: var(--pink);
+  color: var(--blue);
 }
 
 .coin-desc-link h3 {
@@ -250,7 +251,7 @@ a:hover {
 }
 
 .coin-link a {
-  color: var(--pink);
+  color: var(--blue);
   font-weight: 700;
   font-size: 1rem;
 }
