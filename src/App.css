@@ -4,6 +4,7 @@
   --bgSecondary: #f9f9f9;
   --blue: #0071bd;
   --light-blue: #c6edff;
+  --dark-grey: #444;
   --border: #d9d9d9;
 }
 
@@ -14,7 +15,7 @@
 }
 
 a:hover {
-  color: var(--light-blue) !important;
+  color: var(--light-blue);
 }
 
 .app {
@@ -363,6 +364,13 @@ a:hover {
 }
 .crypto-card .crypto-image {
   width: 35px;
+}
+.ant-card {
+  transition: all .24s;
+}
+.ant-card:hover {
+  transform: translateY(-2px);
+  box-shadow: .3rem .3rem .7rem #666;
 }
 .select-timeperiod {
   width: 200px !important;
