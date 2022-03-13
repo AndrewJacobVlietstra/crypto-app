@@ -180,6 +180,24 @@ a:hover {
   color: var(--blue) !important;
 }
 
+.coin-details-heading h3 {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: .75rem;
+}
+.coin-details-heading .what-is-coin {
+  font-size: 26px;
+}
+
+.coin-details-heading p:not(:first-child) {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1.5rem;
+}
+
+.coin-details-heading p:last-child {
+  border: none;
+}
+
 .coin-stats {
   display: flex;
   justify-content: space-between;
@@ -362,7 +380,7 @@ a:hover {
 .crypto-card {
   min-width: 250px;
 }
-.crypto-card .crypto-image {
+.crypto-image {
   width: 35px;
 }
 .ant-card {

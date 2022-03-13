@@ -14,7 +14,7 @@ const demoImage =
 const NewsPage = ({ simplified }) => {
   const count = simplified ? 6 : 15;
   const [newsCategory, setNewsCategory] = useState("Cryptocurrency");
-  const { data: cryptoNews, isFetching } = useGetCryptoNewsQuery({
+  const { data: cryptoNews } = useGetCryptoNewsQuery({
     newsCategory,
     count,
   });
