@@ -10,7 +10,7 @@ import App from "./App";
 
 ReactDOM.render(
   <Router>
-    <Provider store={store}>
+    <Provider store={store} basename="/crypto-app">
       <App />
     </Provider>
   </Router>,
