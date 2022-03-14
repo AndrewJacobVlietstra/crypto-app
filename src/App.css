@@ -24,12 +24,13 @@ a:hover {
 }
 
 .navbar {
-  flex: 0.2;
+  /* flex: 0.2; */
+  width: 210px;
   background-color: rgb(0, 21, 41);
 }
 
 .main {
-  flex: 0.8;
+  flex: 1;
   width: 100%;
 }
 .routes {
@@ -53,7 +54,7 @@ a:hover {
   width: 100%;
 }
 .logo {
-  margin: 0 0 0 15px;
+  margin: 0 0 0 7px;
 }
 .logo a {
   color: white;
@@ -75,24 +76,6 @@ a:hover {
   align-items: center;
 }
 
-@media screen and (max-width: 1300px) {
-  .main {
-    margin-left: 50px;
-  }
-}
-
-@media screen and (max-width: 1170px) {
-  .main {
-    margin-left: 50px;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .main {
-    margin-left: 100px;
-  }
-}
-
 @media screen and (max-width: 800px) {
   .app {
     flex-direction: column;
@@ -105,7 +88,7 @@ a:hover {
 
   .main {
     flex: 1;
-    margin-top: 90px;
+    margin-top: 125px;
     margin-left: 0px;
     margin-right: 10px;
   }
@@ -125,6 +108,9 @@ a:hover {
   .ant-menu {
     position: absolute;
     right: 0px;
+  }
+  .ant-btn {
+    height: 38px;
   }
   .home-title {
     font-size: 1.4rem !important;
@@ -358,6 +344,13 @@ a:hover {
   margin-top: 0px !important;
   font-weight: 900 !important;
 }
+.heading,
+.home-global-stats {
+  text-align: left;
+}
+.home-global-stats div{
+  margin: .5rem 0;
+}
 .home-heading-container {
   display: flex;
   justify-content: space-between;
@@ -386,6 +379,9 @@ a:hover {
 }
 .exchange-row:hover {
   background-color: #ececec;
+}
+.exchange-link:hover {
+  color: #333;
 }
 .search-crypto {
   margin: 20px auto 30px auto;

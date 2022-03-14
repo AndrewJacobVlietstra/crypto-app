@@ -13,8 +13,6 @@ const Exchanges = () => {
   const { data, isFetching } = useGetExchangesQuery();
   const exchangesList = data?.data?.exchanges;
 
-  console.log(exchangesList);
- // Note: To access this endpoint you need premium plan
   if (isFetching) return <Loader />;
 
   return (
@@ -31,7 +29,7 @@ const Exchanges = () => {
           <Col span={6}>
             <Text><strong>{exchange?.rank}.</strong></Text>
             <Avatar className="exchange-image" src={exchange?.iconUrl} />
-            <Text><strong>{exchange?.name}</strong></Text>
+            <a className='exchange-link' href={`https://www.google.com/search?q=${exchange?.name}`} target="_blank"><strong>{exchange?.name}</strong></a>
           </Col>
           <Col span={6}>${exchange?.['24hVolume'] && millify(exchange?.['24hVolume'])}</Col>
           <Col span={6}>{exchange?.numberOfMarkets && millify(exchange?.numberOfMarkets)}</Col>
