@@ -370,6 +370,23 @@ a:hover {
 .exchange-image {
   margin: 0px 10px !important;
 }
+.exchange-heading-row {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem .5rem;
+}
+.exchange-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #e2e2e2;
+  margin: 1rem 0;
+  padding: 1rem .5rem;
+  transition: all .22s;
+}
+.exchange-row:hover {
+  background-color: #ececec;
+}
 .search-crypto {
   margin: 20px auto 30px auto;
   width: 250px;
