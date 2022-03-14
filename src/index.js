@@ -9,8 +9,8 @@ import store from './redux/store';
 import App from "./App";
 
 ReactDOM.render(
-  <Router>
-    <Provider store={store} basename="/crypto-app">
+  <Router basename="/crypto-app">
+    <Provider store={store}>
       <App />
     </Provider>
   </Router>,
