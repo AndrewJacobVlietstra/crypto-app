@@ -7,7 +7,7 @@ import { MoneyCollectOutlined, DollarCircleOutlined, FundOutlined, ExclamationCi
 
 import { useGetCryptoDetailsQuery, useGetCryptoHistoryQuery } from '../services/cryptoApi';
 
-import LineChart from '../components/LineChart';
+import { Loader, LineChart } from '../components';
 
 const { Title, Text } = Typography;
 const { Option } = Select;
@@ -19,7 +19,7 @@ const CryptoDetailsPage = () => {
   const { data: coinHistory } = useGetCryptoHistoryQuery({ coinId, timePeriod });
   const cryptoDetails = data?.data?.coin;
 
-  if (isFetching) return 'Loading...';
+  if (isFetching) return <Loader />;
   
   const time = ['3h', '24h', '7d', '30d', '1y', '3m', '3y', '5y'];
 
@@ -58,8 +58,8 @@ const CryptoDetailsPage = () => {
         >
         {time.map((timePeriod) => <Option key={timePeriod}>{timePeriod}</Option>)}
       </Select>
-
       <LineChart coinHistory={coinHistory} currentPrice={cryptoDetails?.price && millify(cryptoDetails?.price)} coinName={cryptoDetails?.name} />
+
 
       <Col className='stats-container'>
         <Col className='coin-value-statistics'>
@@ -82,13 +82,14 @@ const CryptoDetailsPage = () => {
           ))}
         </Col>
 
+
         <Col className='other-stats-info'>
           <Col className='coin-value-statistics-heading'>
             <Title level={3} className='coin-details-heading'>
               Other General Statistics
             </Title>
             <p>
-              An overview showing the stats of {cryptoDetails?.name}
+              A general stats overview for {cryptoDetails?.name}
             </p>
           </Col>
           {genericStats.map(({ icon, title, value }) => (
