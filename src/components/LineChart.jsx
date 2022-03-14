@@ -31,7 +31,7 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
   const coinPrice = [];
   const coinTimeStamp = [];
   // JavaScript date/time numbers are milliseconds since The Epoch, not seconds since The Epoch like old-style Unix Epoch values. If you have a value in seconds, multiply by 1000
-  for (let i = 0; i < coinHistory?.data?.history?.length; i++) {
+  for (let i = coinHistory?.data?.history?.length - 1; i > 0; i--) {
     coinPrice.push(coinHistory.data.history[i].price);
     coinTimeStamp.push(new Date(coinHistory.data.history[i].timestamp * 1000).toLocaleDateString());
   }
